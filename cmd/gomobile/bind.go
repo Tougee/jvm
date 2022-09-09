@@ -9,13 +9,14 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/danbrough/mobile/klog"
 	"io"
 	"io/ioutil"
 	"os"
 	"os/exec"
 	"path/filepath"
 	"strings"
+
+	"github.com/danbrough/mobile/klog"
 
 	"golang.org/x/mod/modfile"
 	"golang.org/x/tools/go/packages"
@@ -93,8 +94,11 @@ func runBind(cmd *command) error {
 		}
 
 	} else if isLinuxPlatform(targets[0].platform) {
+		klog.KLog.Debug("building for linux")
 	} else if isWindowsPlatform(targets[0].platform) {
 		klog.KLog.Debug("building for windows")
+	} else if isDarwinPlatform(targets[0].platform) {
+		klog.KLog.Debug("building for darwin")
 	} else {
 		if bindJavaPkg != "" {
 			return fmt.Errorf("-javapkg is supported only for android target")
@@ -136,6 +140,8 @@ func runBind(cmd *command) error {
 		return goLinuxBind(gobind, pkgs, targets)
 	case isWindowsPlatform(targets[0].platform):
 		return goWindowsBind(gobind, pkgs, targets)
+	case isDarwinPlatform(targets[0].platform):
+		return goDarwinBind(gobind, pkgs, targets)
 	case isApplePlatform(targets[0].platform):
 		if !xcodeAvailable() {
 			return fmt.Errorf("-target=%q requires Xcode", buildTarget)

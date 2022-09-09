@@ -112,8 +112,8 @@ func genPkg(lang string, p *types.Package, astFiles []*ast.File, allPkg []*types
 			}
 			copyFile(filepath.Join("src", "gobind", "seq_support.c"), filepath.Join(javaDir, "seq_support.c.support"))
 			copyFile(filepath.Join("src", "gobind", "seq_support.go"), filepath.Join(javaDir, "seq_support.go.support"))
-		/*	copyFile(filepath.Join("src", "gobind", "seq_linux.c"), filepath.Join(javaDir, "seq_linux.c.support"))
-			copyFile(filepath.Join("src", "gobind", "seq_linux.go"), filepath.Join(javaDir, "seq_linux.go.support"))*/
+			/*	copyFile(filepath.Join("src", "gobind", "seq_linux.c"), filepath.Join(javaDir, "seq_linux.c.support"))
+				copyFile(filepath.Join("src", "gobind", "seq_linux.go"), filepath.Join(javaDir, "seq_linux.go.support"))*/
 			copyFile(filepath.Join("src", "gobind", "seq_support.h"), filepath.Join(javaDir, "seq_support.h"))
 		}
 	case "go":
@@ -187,7 +187,7 @@ func genPkgH(w io.Writer, pname string) {
 #endif
 #endif
 #ifdef __GOBIND_DARWIN__
-#include "%[1]s_darwin.h"
+#include "%[1]s_support.h"
 #endif`, pname)
 }
 

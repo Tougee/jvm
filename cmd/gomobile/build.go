@@ -10,13 +10,14 @@ import (
 	"bufio"
 	"errors"
 	"fmt"
-	"github.com/danbrough/mobile/klog"
 	"io"
 	"os"
 	"os/exec"
 	"regexp"
 	"strconv"
 	"strings"
+
+	"github.com/danbrough/mobile/klog"
 
 	"golang.org/x/tools/go/packages"
 )
@@ -395,6 +396,7 @@ func parseBuildTarget(buildTarget string) ([]targetInfo, error) {
 			isApple = true
 		} else if isLinuxPlatform(platform) {
 		} else if isWindowsPlatform(platform) {
+		} else if isDarwinPlatform(platform) {
 		} else {
 			return nil, fmt.Errorf("unsupported platform: %q", platform)
 		}

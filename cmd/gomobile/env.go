@@ -3,13 +3,14 @@ package main
 import (
 	"errors"
 	"fmt"
-	"github.com/danbrough/mobile/klog"
 	"io/ioutil"
 	"os"
 	"os/exec"
 	"path/filepath"
 	"runtime"
 	"strings"
+
+	"github.com/danbrough/mobile/klog"
 )
 
 // General mobile build environment. Initialized by envInit.
@@ -36,6 +37,10 @@ func isWindowsPlatform(platform string) bool {
 	return platform == "windows"
 }
 
+func isDarwinPlatform(platform string) bool {
+	return platform == "darwin"
+}
+
 func isApplePlatform(platform string) bool {
 	return contains(applePlatforms, platform)
 }
@@ -56,6 +61,8 @@ func platformArchs(platform string) []string {
 		return []string{"arm", "arm64", "386", "amd64"}
 	case "windows":
 		return []string{"arm", "arm64", "386", "amd64"}
+	case "darwin":
+		return []string{"arm", "arm64", "386", "amd64"}
 	default:
 		panic(fmt.Sprintf("unexpected platform: %s", platform))
 	}
@@ -74,6 +81,8 @@ func platformOS(platform string) string {
 		return "linux"
 	case "windows":
 		return "windows"
+	case "darwin":
+		return "darwin"
 	case "ios", "iossimulator":
 		return "ios"
 	case "macos", "maccatalyst":
@@ -95,6 +104,8 @@ func platformTags(platform string) []string {
 		return []string{"windows"}
 	case "linux":
 		return []string{"linux"}
+	case "darwin":
+		return []string{"darwin"}
 	case "ios", "iossimulator":
 		return []string{"ios"}
 	case "macos":
@@ -186,7 +197,7 @@ func envInit() (err error) {
 	*/
 	useOpenssl := stringInSlice("openssl", buildTags)
 	sslLibsDir := os.Getenv("OPENSSL_LIBS")
-	klog.KLog.Trace("sslLibsDir: %s",sslLibsDir)
+	klog.KLog.Trace("sslLibsDir: %s", sslLibsDir)
 
 	if ndkRoot, err := ndkRoot(); err == nil {
 		androidEnv = make(map[string][]string)
@@ -224,7 +235,7 @@ func envInit() (err error) {
 			if useOpenssl && sslLibsDir != "" {
 				sslDir := filepath.Join(sslLibsDir, toolchain.abi)
 				klog.KLog.Warn("Using static openssl libs at: %s", sslDir)
-				androidEnv[arch] = append(androidEnv[arch], "CGO_CFLAGS=-I"+filepath.Join(sslDir, "include"), "CGO_LDFLAGS=-L"+filepath.Join(sslDir,"lib"))
+				androidEnv[arch] = append(androidEnv[arch], "CGO_CFLAGS=-I"+filepath.Join(sslDir, "include"), "CGO_LDFLAGS=-L"+filepath.Join(sslDir, "lib"))
 			}
 
 			if arch == "arm" {
@@ -328,7 +339,7 @@ func ndkRoot() (string, error) {
 
 	androidHome := os.Getenv("ANDROID_HOME")
 	if androidHome != "" {
-		ndkRoot := filepath.Join(androidHome, "ndk-bundle")
+		ndkRoot := filepath.Join(androidHome, "ndk/23.0.7599858")
 		_, err := os.Stat(ndkRoot)
 		if err == nil {
 			return ndkRoot, nil
