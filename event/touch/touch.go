@@ -4,8 +4,8 @@
 
 // Package touch defines an event for touch input.
 //
-// See the github.com/danbrough/mobile/app package for details on the event model.
-package touch // import "github.com/danbrough/mobile/event/touch"
+// See the github.com/tougee/jvm/app package for details on the event model.
+package touch // import "github.com/tougee/jvm/event/touch"
 
 // The best source on android input events is the NDK: include/android/input.h
 //

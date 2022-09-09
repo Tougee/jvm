@@ -22,8 +22,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	_ "github.com/danbrough/mobile/bind/java"
-	_seq "github.com/danbrough/mobile/bind/seq"
+	_ "github.com/tougee/jvm/bind/java"
+	_seq "github.com/tougee/jvm/bind/seq"
 )
 
 func init() {

@@ -21,7 +21,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/danbrough/mobile/internal/importers"
+	"github.com/tougee/jvm/internal/importers"
 )
 
 // Class is the bind representation of a Java class or

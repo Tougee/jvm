@@ -1,9 +1,9 @@
-module github.com/danbrough/mobile/example/ivy
+module github.com/tougee/jvm/example/ivy
 
 go 1.17
 
 require (
-	github.com/danbrough/mobile v0.0.0-20210924032853-1c027f395ef7
+	github.com/tougee/jvm v0.0.0-20210924032853-1c027f395ef7
 	robpike.io/ivy v0.1.4
 )
 

@@ -30,36 +30,36 @@ var tests = []struct {
 	{
 		name: "ObjC-Testpkg",
 		lang: "objc",
-		pkg:  "github.com/danbrough/mobile/bind/testdata/testpkg",
+		pkg:  "github.com/tougee/jvm/bind/testdata/testpkg",
 	},
 	{
 		name: "Java-Testpkg",
 		lang: "java",
-		pkg:  "github.com/danbrough/mobile/bind/testdata/testpkg",
+		pkg:  "github.com/tougee/jvm/bind/testdata/testpkg",
 	},
 	{
 		name: "Go-Testpkg",
 		lang: "go",
-		pkg:  "github.com/danbrough/mobile/bind/testdata/testpkg",
+		pkg:  "github.com/tougee/jvm/bind/testdata/testpkg",
 	},
 	{
 		name:    "Java-Javapkg",
 		lang:    "java",
-		pkg:     "github.com/danbrough/mobile/bind/testdata/testpkg/javapkg",
+		pkg:     "github.com/tougee/jvm/bind/testdata/testpkg/javapkg",
 		goos:    "android",
 		reverse: true,
 	},
 	{
 		name:    "Go-Javapkg",
 		lang:    "go",
-		pkg:     "github.com/danbrough/mobile/bind/testdata/testpkg/javapkg",
+		pkg:     "github.com/tougee/jvm/bind/testdata/testpkg/javapkg",
 		goos:    "android",
 		reverse: true,
 	},
 	{
 		name: "Go-Cgopkg",
 		lang: "go,java,objc",
-		pkg:  "github.com/danbrough/mobile/bind/testdata/cgopkg",
+		pkg:  "github.com/tougee/jvm/bind/testdata/cgopkg",
 		goos: "android",
 	},
 }
@@ -78,7 +78,7 @@ func testMain(m *testing.M) int {
 	bin.Close()
 	defer os.Remove(bin.Name())
 	if runtime.GOOS != "android" {
-		if out, err := exec.Command("go", "build", "-o", bin.Name(), "github.com/danbrough/mobile/cmd/gobind").CombinedOutput(); err != nil {
+		if out, err := exec.Command("go", "build", "-o", bin.Name(), "github.com/tougee/jvm/cmd/gobind").CombinedOutput(); err != nil {
 			log.Fatalf("gobind build failed: %v: %s", err, out)
 		}
 		gobindBin = bin.Name()
@@ -115,7 +115,7 @@ func TestGobind(t *testing.T) { packagestest.TestAll(t, testGobind) }
 func testGobind(t *testing.T, exporter packagestest.Exporter) {
 	_, javapErr := exec.LookPath("javap")
 	exported := packagestest.Export(t, exporter, []packagestest.Module{{
-		Name:  "github.com/danbrough/mobile",
+		Name:  "github.com/tougee/jvm",
 		Files: packagestest.MustCopyFileTree("../.."),
 	}})
 	defer exported.Cleanup()
@@ -156,8 +156,8 @@ type Struct struct{
 			},
 		},
 		{
-			// gobind requires github.com/danbrough/mobile to generate code for reverse bindings.
-			Name:  "github.com/danbrough/mobile",
+			// gobind requires github.com/tougee/jvm to generate code for reverse bindings.
+			Name:  "github.com/tougee/jvm",
 			Files: packagestest.MustCopyFileTree("../.."),
 		},
 	})
@@ -186,7 +186,7 @@ func BenchmarkGobind(b *testing.B) {
 func benchmarkGobind(b *testing.B, exporter packagestest.Exporter) {
 	_, javapErr := exec.LookPath("javap")
 	exported := packagestest.Export(b, exporter, []packagestest.Module{{
-		Name:  "github.com/danbrough/mobile",
+		Name:  "github.com/tougee/jvm",
 		Files: packagestest.MustCopyFileTree("../.."),
 	}})
 	defer exported.Cleanup()

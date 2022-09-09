@@ -17,7 +17,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/danbrough/mobile/klog"
+	"github.com/tougee/jvm/klog"
 
 	"golang.org/x/tools/go/packages"
 )
@@ -170,8 +170,8 @@ func runBuildImpl(cmd *command) (*packages.Package, error) {
 		}
 	}
 
-	if !nmpkgs["github.com/danbrough/mobile/app"] {
-		return nil, fmt.Errorf(`%s does not import "github.com/danbrough/mobile/app"`, pkg.PkgPath)
+	if !nmpkgs["github.com/tougee/jvm/app"] {
+		return nil, fmt.Errorf(`%s does not import "github.com/tougee/jvm/app"`, pkg.PkgPath)
 	}
 
 	return pkg, nil
@@ -181,7 +181,7 @@ var nmRE = regexp.MustCompile(`[0-9a-f]{8} t _?(?:.*/vendor/)?(golang.org/x.*/[^
 
 func extractPkgs(nm string, path string) (map[string]bool, error) {
 	if buildN {
-		return map[string]bool{"github.com/danbrough/mobile/app": true}, nil
+		return map[string]bool{"github.com/tougee/jvm/app": true}, nil
 	}
 	r, w := io.Pipe()
 	cmd := exec.Command(nm, path)

@@ -4,8 +4,8 @@
 
 // Package paint defines an event for the app being ready to paint.
 //
-// See the github.com/danbrough/mobile/app package for details on the event model.
-package paint // import "github.com/danbrough/mobile/event/paint"
+// See the github.com/tougee/jvm/app package for details on the event model.
+package paint // import "github.com/tougee/jvm/event/paint"
 
 // Event indicates that the app is ready to paint the next frame of the GUI.
 //

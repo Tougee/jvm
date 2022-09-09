@@ -15,10 +15,10 @@ import (
 
 	_ "image/png"
 
-	"github.com/danbrough/mobile/asset"
-	"github.com/danbrough/mobile/exp/f32"
-	"github.com/danbrough/mobile/exp/sprite"
-	"github.com/danbrough/mobile/exp/sprite/clock"
+	"github.com/tougee/jvm/asset"
+	"github.com/tougee/jvm/exp/f32"
+	"github.com/tougee/jvm/exp/sprite"
+	"github.com/tougee/jvm/exp/sprite/clock"
 )
 
 const (

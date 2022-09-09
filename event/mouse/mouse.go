@@ -4,13 +4,13 @@
 
 // Package mouse defines an event for mouse input.
 //
-// See the github.com/danbrough/mobile/app package for details on the event model.
-package mouse // import "github.com/danbrough/mobile/event/mouse"
+// See the github.com/tougee/jvm/app package for details on the event model.
+package mouse // import "github.com/tougee/jvm/event/mouse"
 
 import (
 	"fmt"
 
-	"github.com/danbrough/mobile/event/key"
+	"github.com/tougee/jvm/event/key"
 )
 
 // Event is a mouse event.

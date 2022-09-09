@@ -16,7 +16,7 @@ import "C"
 
 import (
 	"doc"
-	_seq "github.com/danbrough/mobile/bind/seq"
+	_seq "github.com/tougee/jvm/bind/seq"
 )
 
 // suppress the error if seq ends up unused

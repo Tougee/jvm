@@ -3,4 +3,4 @@
 // license that can be found in the LICENSE file.
 
 // Package font provides platform independent access to system fonts.
-package font // import "github.com/danbrough/mobile/exp/font"
+package font // import "github.com/tougee/jvm/exp/font"

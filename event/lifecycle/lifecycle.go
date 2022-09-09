@@ -16,8 +16,8 @@
 // StageFocused means that the app has gained the focus. A negative crossing
 // means it has lost the focus.
 //
-// See the github.com/danbrough/mobile/app package for details on the event model.
-package lifecycle // import "github.com/danbrough/mobile/event/lifecycle"
+// See the github.com/tougee/jvm/app package for details on the event model.
+package lifecycle // import "github.com/tougee/jvm/event/lifecycle"
 
 import (
 	"fmt"

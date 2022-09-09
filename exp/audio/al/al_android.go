@@ -190,7 +190,7 @@ import (
 	"log"
 	"unsafe"
 
-	"github.com/danbrough/mobile/internal/mobileinit"
+	"github.com/tougee/jvm/internal/mobileinit"
 )
 
 var (

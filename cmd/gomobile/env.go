@@ -10,7 +10,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/danbrough/mobile/klog"
+	"github.com/tougee/jvm/klog"
 )
 
 // General mobile build environment. Initialized by envInit.

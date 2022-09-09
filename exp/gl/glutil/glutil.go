@@ -5,13 +5,13 @@
 //go:build darwin || linux || windows
 // +build darwin linux windows
 
-package glutil // import "github.com/danbrough/mobile/exp/gl/glutil"
+package glutil // import "github.com/tougee/jvm/exp/gl/glutil"
 
 import (
 	"fmt"
 
-	"github.com/danbrough/mobile/exp/f32"
-	"github.com/danbrough/mobile/gl"
+	"github.com/tougee/jvm/exp/f32"
+	"github.com/tougee/jvm/gl"
 )
 
 // CreateProgram creates, compiles, and links a gl.Program.

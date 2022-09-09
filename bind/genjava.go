@@ -14,7 +14,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/danbrough/mobile/internal/importers/java"
+	"github.com/tougee/jvm/internal/importers/java"
 )
 
 // TODO(crawshaw): disallow basic android java type names in exported symbols.

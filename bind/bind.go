@@ -6,8 +6,8 @@
 //
 // See the documentation on the gobind command for usage details
 // and the list of currently supported types.
-// (http://godoc.org/github.com/danbrough/mobile/cmd/gobind)
-package bind // import "github.com/danbrough/mobile/bind"
+// (http://godoc.org/github.com/tougee/jvm/cmd/gobind)
+package bind // import "github.com/tougee/jvm/bind"
 
 // TODO(crawshaw): slice support
 // TODO(crawshaw): channel support

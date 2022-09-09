@@ -1,4 +1,4 @@
-module github.com/danbrough/mobile
+module github.com/tougee/jvm
 
 go 1.16
 

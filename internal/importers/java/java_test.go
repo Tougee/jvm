@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/danbrough/mobile/internal/importers"
+	"github.com/tougee/jvm/internal/importers"
 )
 
 func TestImport(t *testing.T) {

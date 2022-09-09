@@ -17,9 +17,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/danbrough/mobile/internal/importers"
-	"github.com/danbrough/mobile/internal/importers/java"
-	"github.com/danbrough/mobile/internal/importers/objc"
+	"github.com/tougee/jvm/internal/importers"
+	"github.com/tougee/jvm/internal/importers/java"
+	"github.com/tougee/jvm/internal/importers/objc"
 	"golang.org/x/tools/go/packages"
 )
 

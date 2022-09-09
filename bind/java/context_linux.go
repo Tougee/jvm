@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package java // import "github.com/danbrough/mobile/bind/java"
+package java // import "github.com/tougee/jvm/bind/java"
 
 //
 //#include <jni.h>
@@ -11,7 +11,7 @@ import "C"
 import (
 	"unsafe"
 
-	"github.com/danbrough/mobile/internal/mobileinit"
+	"github.com/tougee/jvm/internal/mobileinit"
 )
 
 //export setContext

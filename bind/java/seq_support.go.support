@@ -22,7 +22,7 @@ import "C"
 import (
 	"unsafe"
 
-	"github.com/danbrough/mobile/bind/seq"
+	"github.com/tougee/jvm/bind/seq"
 )
 
 // DestroyRef is called by Java to inform Go it is done with a reference.

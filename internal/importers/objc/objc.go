@@ -19,7 +19,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/danbrough/mobile/internal/importers"
+	"github.com/tougee/jvm/internal/importers"
 )
 
 type parser struct {

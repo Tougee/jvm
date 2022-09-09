@@ -7,7 +7,7 @@ package main
 import (
 	"archive/zip"
 	"fmt"
-	"github.com/danbrough/mobile/klog"
+	"github.com/tougee/jvm/klog"
 	"io"
 	"io/ioutil"
 	"os"

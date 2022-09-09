@@ -9,7 +9,7 @@ Requirements
   - Go 1.17 or newer
   - Android SDK
   - Android NDK
-  - `github.com/danbrough/mobile/cmd/gomobile`
+  - `github.com/tougee/jvm/cmd/gomobile`
 
 The `gomobile` command uses `ANDROID_HOME` and `ANDROID_NDK_HOME` environment variables.
 ```
@@ -24,8 +24,8 @@ Note: Both ANDROID_SDK_ROOT and ANDROID_NDK_HOME are deprecated in Android tooli
 From this directory, run:
 
 ```sh
-  go install github.com/danbrough/mobile/cmd/gomobile@latest
-  go install github.com/danbrough/mobile/cmd/gobind@latest
+  go install github.com/tougee/jvm/cmd/gomobile@latest
+  go install github.com/tougee/jvm/cmd/gobind@latest
 
   # Make sure `gomobile` and `gobind` is in your `PATH`.
   gomobile bind -o app/ivy.aar robpike.io/ivy/mobile
@@ -33,10 +33,10 @@ From this directory, run:
 
 Open this directory from Android Studio, and build.
 
-`robpike.io/ivy` and `github.com/danbrough/mobile` are required dependencies of this main module. In order to update them:
+`robpike.io/ivy` and `github.com/tougee/jvm` are required dependencies of this main module. In order to update them:
 
 ```
-  go get -d github.com/danbrough/mobile@latest
+  go get -d github.com/tougee/jvm@latest
   go get -d robpike.io/ivy/mobile
   go mod tidy
 ```

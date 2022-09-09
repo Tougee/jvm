@@ -29,12 +29,12 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/danbrough/mobile/event/key"
-	"github.com/danbrough/mobile/event/lifecycle"
-	"github.com/danbrough/mobile/event/paint"
-	"github.com/danbrough/mobile/event/size"
-	"github.com/danbrough/mobile/event/touch"
-	"github.com/danbrough/mobile/geom"
+	"github.com/tougee/jvm/event/key"
+	"github.com/tougee/jvm/event/lifecycle"
+	"github.com/tougee/jvm/event/paint"
+	"github.com/tougee/jvm/event/size"
+	"github.com/tougee/jvm/event/touch"
+	"github.com/tougee/jvm/geom"
 )
 
 var initThreadID uint64

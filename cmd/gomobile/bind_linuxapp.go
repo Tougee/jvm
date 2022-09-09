@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/danbrough/mobile/klog"
+	"github.com/tougee/jvm/klog"
 	"golang.org/x/tools/go/packages"
 )
 

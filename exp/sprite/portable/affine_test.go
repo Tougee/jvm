@@ -15,9 +15,9 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/danbrough/mobile/event/size"
-	"github.com/danbrough/mobile/exp/f32"
-	"github.com/danbrough/mobile/geom"
+	"github.com/tougee/jvm/event/size"
+	"github.com/tougee/jvm/exp/f32"
+	"github.com/tougee/jvm/geom"
 )
 
 func TestAffine(t *testing.T) {

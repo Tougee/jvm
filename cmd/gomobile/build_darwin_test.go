@@ -35,8 +35,8 @@ func TestAppleBuild(t *testing.T) {
 		pkg  string
 		main bool
 	}{
-		{"github.com/danbrough/mobile/example/basic", true},
-		{"github.com/danbrough/mobile/bind/testdata/testpkg", false},
+		{"github.com/tougee/jvm/example/basic", true},
+		{"github.com/tougee/jvm/bind/testdata/testpkg", false},
 	}
 	for _, test := range tests {
 		buf := new(bytes.Buffer)

@@ -17,8 +17,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/danbrough/mobile/app/internal/apptest"
-	"github.com/danbrough/mobile/event/size"
+	"github.com/tougee/jvm/app/internal/apptest"
+	"github.com/tougee/jvm/event/size"
 )
 
 // TestAndroidApp tests the lifecycle, event, and window semantics of a
@@ -67,7 +67,7 @@ func TestAndroidApp(t *testing.T) {
 	}
 	defer os.Chdir(origWD)
 
-	run(t, "gomobile", "install", "github.com/danbrough/mobile/app/internal/testapp")
+	run(t, "gomobile", "install", "github.com/tougee/jvm/app/internal/testapp")
 
 	ln, err := net.Listen("tcp4", "localhost:0")
 	if err != nil {

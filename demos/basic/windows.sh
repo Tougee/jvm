@@ -6,5 +6,5 @@ cd $(dirname $0)
 export JAVA_HOME=/mnt/files2/windows/jdk
 
 gomobile bind -target=windows/amd64 -x -v -work -o build \
-  github.com/danbrough/mobile/demos/basic/hello || exit 1
+  github.com/tougee/jvm/demos/basic/hello || exit 1
 

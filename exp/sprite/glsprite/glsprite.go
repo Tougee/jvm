@@ -9,18 +9,18 @@
 //
 // Each sprite.Texture is loaded as a GL texture object and drawn
 // to the screen via an affine transform done in a simple shader.
-package glsprite // import "github.com/danbrough/mobile/exp/sprite/glsprite"
+package glsprite // import "github.com/tougee/jvm/exp/sprite/glsprite"
 
 import (
 	"image"
 	"image/draw"
 
-	"github.com/danbrough/mobile/event/size"
-	"github.com/danbrough/mobile/exp/f32"
-	"github.com/danbrough/mobile/exp/gl/glutil"
-	"github.com/danbrough/mobile/exp/sprite"
-	"github.com/danbrough/mobile/exp/sprite/clock"
-	"github.com/danbrough/mobile/geom"
+	"github.com/tougee/jvm/event/size"
+	"github.com/tougee/jvm/exp/f32"
+	"github.com/tougee/jvm/exp/gl/glutil"
+	"github.com/tougee/jvm/exp/sprite"
+	"github.com/tougee/jvm/exp/sprite/clock"
+	"github.com/tougee/jvm/geom"
 )
 
 type node struct {

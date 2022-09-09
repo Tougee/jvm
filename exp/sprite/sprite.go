@@ -7,7 +7,7 @@
 // A tree of nodes is drawn by a rendering Engine, provided by another
 // package. The OS-independent Go version based on the image package is:
 //
-//	github.com/danbrough/mobile/exp/sprite/portable
+//	github.com/tougee/jvm/exp/sprite/portable
 //
 // An Engine draws a screen starting at a root Node. The tree is walked
 // depth-first, with affine transformations applied at each level.
@@ -22,15 +22,15 @@
 //		modify the scene's nodes and animations (Arranger values)
 //		e.Render(scene, t, sz)
 //	}
-package sprite // import "github.com/danbrough/mobile/exp/sprite"
+package sprite // import "github.com/tougee/jvm/exp/sprite"
 
 import (
 	"image"
 	"image/draw"
 
-	"github.com/danbrough/mobile/event/size"
-	"github.com/danbrough/mobile/exp/f32"
-	"github.com/danbrough/mobile/exp/sprite/clock"
+	"github.com/tougee/jvm/event/size"
+	"github.com/tougee/jvm/exp/f32"
+	"github.com/tougee/jvm/exp/sprite/clock"
 )
 
 type Arranger interface {

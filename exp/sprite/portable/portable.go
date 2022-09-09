@@ -7,18 +7,18 @@
 // It is intended to serve as a reference implementation for testing
 // other sprite Engines written against OpenGL, or other more exotic
 // modern hardware interfaces.
-package portable // import "github.com/danbrough/mobile/exp/sprite/portable"
+package portable // import "github.com/tougee/jvm/exp/sprite/portable"
 
 import (
 	"image"
 	"image/draw"
 
+	"github.com/tougee/jvm/event/size"
+	"github.com/tougee/jvm/exp/f32"
+	"github.com/tougee/jvm/exp/sprite"
+	"github.com/tougee/jvm/exp/sprite/clock"
 	xdraw "golang.org/x/image/draw"
 	"golang.org/x/image/math/f64"
-	"github.com/danbrough/mobile/event/size"
-	"github.com/danbrough/mobile/exp/f32"
-	"github.com/danbrough/mobile/exp/sprite"
-	"github.com/danbrough/mobile/exp/sprite/clock"
 )
 
 // Engine builds a sprite Engine that renders onto dst.

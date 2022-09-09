@@ -9,6 +9,6 @@ package dummy
 // This is a dummy go file to add required module dependencies to go.mod.
 
 import (
-	_ "github.com/danbrough/mobile/bind"
+	_ "github.com/tougee/jvm/bind"
 	_ "robpike.io/ivy"
 )

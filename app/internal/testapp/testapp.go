@@ -12,13 +12,13 @@ import (
 	"log"
 	"net"
 
-	"github.com/danbrough/mobile/app"
-	"github.com/danbrough/mobile/app/internal/apptest"
-	"github.com/danbrough/mobile/event/lifecycle"
-	"github.com/danbrough/mobile/event/paint"
-	"github.com/danbrough/mobile/event/size"
-	"github.com/danbrough/mobile/event/touch"
-	"github.com/danbrough/mobile/gl"
+	"github.com/tougee/jvm/app"
+	"github.com/tougee/jvm/app/internal/apptest"
+	"github.com/tougee/jvm/event/lifecycle"
+	"github.com/tougee/jvm/event/paint"
+	"github.com/tougee/jvm/event/size"
+	"github.com/tougee/jvm/event/touch"
+	"github.com/tougee/jvm/gl"
 )
 
 func main() {

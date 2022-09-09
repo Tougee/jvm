@@ -18,10 +18,10 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/danbrough/mobile/bind"
-	"github.com/danbrough/mobile/internal/importers"
-	"github.com/danbrough/mobile/internal/importers/java"
-	"github.com/danbrough/mobile/internal/importers/objc"
+	"github.com/tougee/jvm/bind"
+	"github.com/tougee/jvm/internal/importers"
+	"github.com/tougee/jvm/internal/importers/java"
+	"github.com/tougee/jvm/internal/importers/objc"
 	"golang.org/x/tools/go/packages"
 )
 
@@ -80,12 +80,12 @@ func genPkg(lang string, p *types.Package, astFiles []*ast.File, allPkg []*types
 		closer()
 		// Generate support files along with the universe package
 		if p == nil {
-			dir, err := packageDir("github.com/danbrough/mobile/bind")
+			dir, err := packageDir("github.com/tougee/jvm/bind")
 			if err != nil {
-				errorf(`"github.com/danbrough/mobile/bind" is not found; run go get github.com/danbrough/mobile/bind: %v`, err)
+				errorf(`"github.com/tougee/jvm/bind" is not found; run go get github.com/tougee/jvm/bind: %v`, err)
 				return
 			}
-			repo := filepath.Clean(filepath.Join(dir, "..")) // github.com/danbrough/mobile directory.
+			repo := filepath.Clean(filepath.Join(dir, "..")) // github.com/tougee/jvm directory.
 			for _, javaFile := range []string{"Seq.java"} {
 				src := filepath.Join(repo, "bind/java/"+javaFile)
 				in, err := os.Open(src)
@@ -105,7 +105,7 @@ func genPkg(lang string, p *types.Package, astFiles []*ast.File, allPkg []*types
 				errorf("unable to import bind/java: %v", err)
 				return
 			}
-			javaDir, err := packageDir("github.com/danbrough/mobile/bind/java")
+			javaDir, err := packageDir("github.com/tougee/jvm/bind/java")
 			if err != nil {
 				errorf("unable to import bind/java: %v", err)
 				return
@@ -129,7 +129,7 @@ func genPkg(lang string, p *types.Package, astFiles []*ast.File, allPkg []*types
 		genPkgH(w, "seq")
 		io.Copy(w, &buf)
 		closer()
-		dir, err := packageDir("github.com/danbrough/mobile/bind")
+		dir, err := packageDir("github.com/tougee/jvm/bind")
 		if err != nil {
 			errorf("unable to import bind: %v", err)
 			return
@@ -158,7 +158,7 @@ func genPkg(lang string, p *types.Package, astFiles []*ast.File, allPkg []*types
 		closer()
 		if p == nil {
 			// Copy support files
-			dir, err := packageDir("github.com/danbrough/mobile/bind/objc")
+			dir, err := packageDir("github.com/tougee/jvm/bind/objc")
 			if err != nil {
 				errorf("unable to import bind/objc: %v", err)
 				return

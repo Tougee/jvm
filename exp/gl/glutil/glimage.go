@@ -13,10 +13,10 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/danbrough/mobile/event/size"
-	"github.com/danbrough/mobile/exp/f32"
-	"github.com/danbrough/mobile/geom"
-	"github.com/danbrough/mobile/gl"
+	"github.com/tougee/jvm/event/size"
+	"github.com/tougee/jvm/exp/f32"
+	"github.com/tougee/jvm/geom"
+	"github.com/tougee/jvm/gl"
 )
 
 // Images maintains the shared state used by a set of *Image objects.

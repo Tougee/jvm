@@ -78,7 +78,7 @@ func runInit(cmd *command) error {
 	}()
 
 	// Make sure gobind is up to date.
-	if err := goInstall([]string{"github.com/danbrough/mobile/cmd/gobind"}, nil); err != nil {
+	if err := goInstall([]string{"github.com/tougee/jvm/cmd/gobind"}, nil); err != nil {
 		return err
 	}
 
@@ -209,9 +209,9 @@ func installOpenAL(gomobilepath string) error {
 }
 
 var commonPkgs = []string{
-	"github.com/danbrough/mobile/gl",
-	"github.com/danbrough/mobile/app",
-	"github.com/danbrough/mobile/exp/app/debug",
+	"github.com/tougee/jvm/gl",
+	"github.com/tougee/jvm/app",
+	"github.com/tougee/jvm/exp/app/debug",
 }
 
 func mkdir(dir string) error {

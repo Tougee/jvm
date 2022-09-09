@@ -12,8 +12,8 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/danbrough/mobile/internal/importers"
-	"github.com/danbrough/mobile/internal/importers/java"
+	"github.com/tougee/jvm/internal/importers"
+	"github.com/tougee/jvm/internal/importers/java"
 )
 
 type (
@@ -941,7 +941,7 @@ import "C"
 
 import (
 	"Java"
-	_seq "github.com/danbrough/mobile/bind/seq"
+	_seq "github.com/tougee/jvm/bind/seq"
 )
 
 `

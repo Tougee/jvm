@@ -5,13 +5,13 @@
 // Package size defines an event for the dimensions, physical resolution and
 // orientation of the app's window.
 //
-// See the github.com/danbrough/mobile/app package for details on the event model.
-package size // import "github.com/danbrough/mobile/event/size"
+// See the github.com/tougee/jvm/app package for details on the event model.
+package size // import "github.com/tougee/jvm/event/size"
 
 import (
 	"image"
 
-	"github.com/danbrough/mobile/geom"
+	"github.com/tougee/jvm/geom"
 )
 
 // Event holds the dimensions, physical resolution and orientation of the app's
@@ -28,7 +28,7 @@ type Event struct {
 	WidthPt, HeightPt geom.Pt
 
 	// PixelsPerPt is the window's physical resolution. It is the number of
-	// pixels in a single geom.Pt, from the github.com/danbrough/mobile/geom package.
+	// pixels in a single geom.Pt, from the github.com/tougee/jvm/geom package.
 	//
 	// There are a wide variety of pixel densities in existing phones and
 	// tablets, so apps should be written to expect various non-integer

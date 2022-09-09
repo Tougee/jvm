@@ -6,7 +6,7 @@
 // +build darwin linux windows
 
 // Package debug provides GL-based debugging tools for apps.
-package debug // import "github.com/danbrough/mobile/exp/app/debug"
+package debug // import "github.com/tougee/jvm/exp/app/debug"
 
 import (
 	"image"
@@ -14,9 +14,9 @@ import (
 	"image/draw"
 	"time"
 
-	"github.com/danbrough/mobile/event/size"
-	"github.com/danbrough/mobile/exp/gl/glutil"
-	"github.com/danbrough/mobile/geom"
+	"github.com/tougee/jvm/event/size"
+	"github.com/tougee/jvm/exp/gl/glutil"
+	"github.com/tougee/jvm/geom"
 )
 
 // FPS draws a count of the frames rendered per second.

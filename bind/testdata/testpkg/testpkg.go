@@ -3,7 +3,7 @@
 // license that can be found in the LICENSE file.
 
 // Package testpkg contains bound functions for testing the cgo-JNI interface.
-// This is used in tests of github.com/danbrough/mobile/bind/java.
+// This is used in tests of github.com/tougee/jvm/bind/java.
 package testpkg
 
 //go:generate gobind -lang=go -outdir=go_testpkg .
@@ -20,11 +20,11 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/danbrough/mobile/asset"
+	"github.com/tougee/jvm/asset"
 
-	"github.com/danbrough/mobile/bind/testdata/testpkg/secondpkg"
-	"github.com/danbrough/mobile/bind/testdata/testpkg/simplepkg"
-	"github.com/danbrough/mobile/bind/testdata/testpkg/unboundpkg"
+	"github.com/tougee/jvm/bind/testdata/testpkg/secondpkg"
+	"github.com/tougee/jvm/bind/testdata/testpkg/simplepkg"
+	"github.com/tougee/jvm/bind/testdata/testpkg/unboundpkg"
 )
 
 const (

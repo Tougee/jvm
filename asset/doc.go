@@ -14,4 +14,4 @@
 //
 // For consistency when debugging on a desktop, assets are read from a
 // directory named assets under the current working directory.
-package asset // import "github.com/danbrough/mobile/asset"
+package asset // import "github.com/tougee/jvm/asset"
