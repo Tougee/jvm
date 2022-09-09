@@ -1,13 +1,10 @@
-# Go support for Mobile devices
+# Go support for JVM
 
 ## Hacked to run on jvm.
 
 This fork of [GoMobile](https://pkg.go.dev/golang.org/x/mobile) has been modified to enable libraries to be built for the JVM  as well as android.
 
-It's currently working on linux (amd64 but arm64, arm, x86 should work also).
-
-I'm not a mac developer but it shouldn't too hard to get this running on darwin,
-if the original project doesn't do that already.
+It's currently working on linux and darwin (amd64 but arm64, arm, x86 should work also).
 
 To get started have a look at the [demos/basic](demos/basic/README.md) demonstration.
 
